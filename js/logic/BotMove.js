@@ -23,6 +23,11 @@ export function BotMove (bot_symbol) {
   //rows
   if (targetIndex < 3 && target_priority !== 4)
     for (let i = 0; i < 3; i++) {
+      if (Board[targetIndex][2] === States.Empty) {
+        Board[targetIndex][2] = bot_symbol;
+        cellNumber = Get2(targetIndex, 2);
+        break;
+      }
       if (Board[targetIndex][i] === States.Empty) {
         Board[targetIndex][i] = bot_symbol;
         cellNumber = Get2(targetIndex, i);
@@ -32,6 +37,11 @@ export function BotMove (bot_symbol) {
   //columns
   if (targetIndex > 2 && targetIndex < 6 && target_priority !== 4)
     for (let i = 0; i < 3; i++) {
+      if (Board[2][targetIndex - 3] === States.Empty) {
+        Board[2][targetIndex - 3] = bot_symbol;
+        cellNumber = Get2(2, targetIndex - 3);
+        break;
+      }
       if (Board[i][targetIndex - 3] === States.Empty) {
         Board[i][targetIndex - 3] = bot_symbol;
         cellNumber = Get2(i, targetIndex - 3);

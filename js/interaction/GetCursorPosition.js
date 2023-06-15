@@ -1,8 +1,6 @@
 import {CanvasContainer} from "../gui/DrawBoard.js";
 import {UserSequence} from "../logic/UserSequence.js";
 
-let cellNumber = 0;
-
 export function GetCursorPosition() {
   let getCursorPosition = (canvas, event) => {
     let rect = CanvasContainer.canvas.getBoundingClientRect();
