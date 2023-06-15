@@ -1,6 +1,6 @@
 
 import {States} from "../States.js";
-import {Board} from "../main.js";
+import {Board} from "../../main.js";
 
 export function Evaluate(SimpleBoard, bot_symbol) {
   let user_symbol;

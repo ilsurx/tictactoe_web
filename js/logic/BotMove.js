@@ -1,7 +1,7 @@
 import {MainEvaluation} from "./evaluation/MainEvaluator.js";
-import {Board} from "./main.js";
+import {Board} from "../main.js";
 import {States} from "./States.js";
-import {Get2} from "./GetCellNumber.js";
+import {Get2} from "../interaction/GetCellNumber.js";
 
 
 export function BotMove (bot_symbol) {

@@ -1,4 +1,4 @@
-import {Board} from "../main.js";
+import {Board} from "../../main.js";
 import {Evaluate} from "./SimpleEvaluator.js";
 
 export function MainEvaluation (bot_symbol) {

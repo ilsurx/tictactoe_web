@@ -1,11 +1,10 @@
 import {GameStates, States} from "./States.js";
-import {Board, Container} from "./main.js";
+import {Board, Container} from "../main.js";
 import {MainEvaluation} from "./evaluation/MainEvaluator.js";
 
 export function Verify (bot_symbol) {
   let state = States.Empty;
   let EvaluatedBoard = MainEvaluation(bot_symbol);
-  console.log(EvaluatedBoard.toString());
   let m = 100;
   for (let i = 0; i < 8; i++) {
     let equals = (bot_symbol === States.Cross);
