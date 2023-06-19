@@ -9,34 +9,42 @@ import {BotMove} from "./BotMove.js";
 import {DrawFinalMessage} from "../gui/DrawFinalMessage.js";
 
 
-export function UserSequence(x, y) {
+export function UserSequence(x, y, botSymbol) {
+  let userSymbol;
+
+  if (botSymbol === States.Cross)
+    userSymbol = States.Zero;
+  else userSymbol = States.Cross;
+
   let UserMoveState = false;
   let cellNumber = GetCellNumber(x, y);
   let botCellNumber;
   let V = 0;
 
+  //user
   if (Container.gameState === GameStates.NotDefined)
-    UserMoveState = UserMove(cellNumber, States.Cross);
+    UserMoveState = UserMove(cellNumber, userSymbol);
 
   if (UserMoveState && Container.gameState === GameStates.NotDefined) {
-    DrawSymbol(States.Cross, cellNumber);
+    DrawSymbol(userSymbol, cellNumber);
     ++Container.counter;
 
     if (Container.gameState === GameStates.NotDefined)
-      V = Verify(States.Zero);
+      V = Verify(botSymbol);
 
     if (Container.gameState !== GameStates.NotDefined) {
       DrawWin(V);
     }
 
+    //bot
     if (Container.gameState === GameStates.NotDefined && Container.counter < 9) {
-      botCellNumber = BotMove(States.Zero);
-      DrawSymbol(States.Zero, botCellNumber);
+      botCellNumber = BotMove(botSymbol);
+      DrawSymbol(botSymbol, botCellNumber);
       ++Container.counter;
     }
 
     if (Container.gameState === GameStates.NotDefined && Container.counter < 9)
-      V = Verify(States.Zero);
+      V = Verify(botSymbol);
 
     if (Container.gameState !== GameStates.NotDefined && Container.counter < 9) {
       DrawWin(V);

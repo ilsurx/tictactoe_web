@@ -261,3 +261,93 @@ textarea {
   }
 }
 
+ div {
+   display: block;
+   margin-left: 10px;
+   marign-right: 10px;
+   margin-bottom: 10px;
+   position: sticky;
+ }
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+body {
+  font-family: -apple-system, ".SFNSText-Regular", "Helvetica Neue", "Roboto", "Segoe UI", sans-serif;
+}
+.toggle {
+  cursor: pointer;
+  display: inline-block;
+  margin-left: 10px;
+  margin-right: 10px;
+  position: sticky;
+}
+
+.toggle-switch {
+  display: inline-block;
+  background: #ccc;
+  border-radius: 16px;
+  width: 58px;
+  height: 32px;
+  position: relative;
+  vertical-align: middle;
+  transition: background 0.25s;
+}
+.toggle-switch:before, .toggle-switch:after {
+  content: "";
+}
+.toggle-switch:before {
+  display: block;
+  background: linear-gradient(to bottom, #fff 0%, #eee 100%);
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  transition: left 0.25s;
+}
+.toggle:hover .toggle-switch:before {
+  background: linear-gradient(to bottom, #fff 0%, #fff 100%);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5);
+}
+.toggle-checkbox:checked + .toggle-switch {
+  background: #56c080;
+}
+.toggle-checkbox:checked + .toggle-switch:before {
+  left: 30px;
+}
+.toggle-checkbox {
+  position: static;
+  visibility: hidden;
+}
+.toggle-label {
+  margin-left: 10px;
+  position: relative;
+  top: 2px;
+}
+
+.button_ios {
+  background: repeat-x scroll 0 0 Gray;
+  border: 0 solid rgba(0, 0, 0, 0.25);
+  border-radius: 12px 12px 12px 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+  color: White;
+  cursor: pointer;
+  display: inline-block;
+  padding: 5px 10px;
+  text-decoration: none;
+  margin-left: 20px;
+  margin-right: 10px;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
+  position: sticky
+}
+.div {
+  margin-top: 10px;
+  position: sticky;
+  font-size: 55px;
+  color: cyan;
+  display: inline-block;
+}

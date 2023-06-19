@@ -24,12 +24,16 @@
 </head>
 
 <body>
-  <p>Tic Tac Toe</p>
-  <canvas id="tictactoe" width="300" height="300" style="border:1px solid #000000;"></canvas>
-  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
-  <script src="js/plugins.js"></script>
+  <div>
+    <button id ="reset" class="button button_ios" >Reset</button>
+    <label class="toggle">
+      <input id="toggle" class="toggle-checkbox" type="checkbox" unchecked>
+      <div class="toggle-switch"></div>
+      <span class="toggle-label"></span>
+    </label>
+    <div id = "text" class = "div">x</div>
+  </div>
+  <canvas id="tictactoe" width="300" height="300" style="border:1px solid #000000; margin-left: 10px"></canvas>
   <script type="module" src="js/main.js"></script>
-
 </body>
-
 </html>

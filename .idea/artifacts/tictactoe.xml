@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="tictactoe">
+    <output-path>$PROJECT_DIR$/out/artifacts/tictactoe</output-path>
+    <root id="root" />
+  </artifact>
+</component>

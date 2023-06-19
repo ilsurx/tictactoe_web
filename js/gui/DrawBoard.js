@@ -1,16 +1,14 @@
-import {GetCursorPosition} from "../interaction/GetCursorPosition.js";
-import {DrawWin} from "./DrawWin.js";
 
 export let CanvasContainer = {
   canvas: document.getElementById('tictactoe'),
   board: ""
 }
 
-export function DrawBoard () {
+CanvasContainer.board = CanvasContainer.canvas.getContext('2d');
 
+export function DrawBoard () {
   let width = 300;
   let margin = 25;
-  CanvasContainer.board = CanvasContainer.canvas.getContext('2d');
   CanvasContainer.board.fillStyle = "BlanchedAlmond";
   CanvasContainer.board.fillRect(0, 0, 300, 300);
   CanvasContainer.board.beginPath();
